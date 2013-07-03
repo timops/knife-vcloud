@@ -20,7 +20,7 @@ require 'chef/knife/vc_common'
 
 class Chef
   class Knife
-    class VcLogin < Chef::Knife
+    class VcQuery < Chef::Knife
       include Knife::VcCommon
 
       banner "knife vc query [objtype] [filter]"
