@@ -1,39 +1,44 @@
-PATH
-  remote: .
+GIT
+  remote: git@github.com:timops/knife-vcloud.git
+  revision: 30283b08fdd26ef136c585b018cad22bc2dcbcf8
   specs:
     knife-vcloud (0.2.3)
       chef (>= 0.10.0)
       knife-windows
       vcloud-rest (~> 0.2.1)
 
+GIT
+  remote: git@github.com:timops/vcloud-rest.git
+  revision: 372bcf39605ed4fe7edc8ebd3d292f8874dce888
+  specs:
+    vcloud-rest (0.2.2)
+      nokogiri (~> 1.5.9)
+      rest-client (~> 1.6.7)
+
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.3.2)
+    addressable (2.3.5)
     akami (1.2.0)
       gyoku (>= 0.4.0)
       nokogiri (>= 1.4.0)
-    builder (3.1.4)
-    bunny (0.7.9)
-    chef (10.16.4)
-      bunny (>= 0.6.0, < 0.8.0)
+    builder (3.2.2)
+    chef (11.4.4)
       erubis
       highline (>= 1.6.9)
-      json (>= 1.4.4, <= 1.6.1)
+      json (>= 1.4.4, <= 1.7.7)
       mixlib-authentication (>= 1.3.0)
-      mixlib-cli (>= 1.1.0)
+      mixlib-cli (~> 1.3.0)
       mixlib-config (>= 1.1.2)
       mixlib-log (>= 1.3.0)
       mixlib-shellout
-      moneta (< 0.7.0)
-      net-ssh (~> 2.2.2)
+      net-ssh (~> 2.6)
       net-ssh-multi (~> 1.1.0)
       ohai (>= 0.6.0)
       rest-client (>= 1.0.4, < 1.7.0)
-      treetop (~> 1.4.9)
-      uuidtools
       yajl-ruby (~> 1.1)
-    crack (0.3.1)
+    crack (0.4.0)
+      safe_yaml (~> 0.9.0)
     em-winrm (0.5.4)
       eventmachine (= 1.0.0.beta.3)
       mixlib-log (>= 1.3.0)
@@ -41,52 +46,52 @@ GEM
       winrm (~> 1.1.0)
     erubis (2.7.0)
     eventmachine (1.0.0.beta.3)
-    ffi (1.2.0)
+    ffi (1.9.0)
     gssapi (1.0.3)
       ffi (>= 1.0.1)
     gyoku (1.0.0)
       builder (>= 2.1.2)
-    highline (1.6.15)
+    highline (1.6.19)
     httpclient (2.2.0.2)
     httpi (0.9.7)
       rack
     ipaddress (0.8.0)
-    json (1.6.1)
-    knife-windows (0.5.10)
+    json (1.7.7)
+    knife-windows (0.5.12)
       em-winrm (= 0.5.4)
     little-plugger (1.1.3)
     logging (1.6.2)
       little-plugger (>= 1.1.3)
-    mime-types (1.19)
-    minitest (4.3.3)
+    mime-types (1.23)
+    minitest (5.0.6)
     mixlib-authentication (1.3.0)
       mixlib-log
-    mixlib-cli (1.2.2)
+    mixlib-cli (1.3.0)
     mixlib-config (1.1.2)
-    mixlib-log (1.4.1)
+    mixlib-log (1.6.0)
     mixlib-shellout (1.1.0)
-    moneta (0.6.0)
-    net-ssh (2.2.2)
-    net-ssh-gateway (1.1.0)
-      net-ssh (>= 1.99.1)
+    net-ssh (2.6.7)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     net-ssh-multi (1.1)
       net-ssh (>= 2.1.4)
       net-ssh-gateway (>= 0.99.0)
-    nokogiri (1.5.6)
-    nori (1.1.3)
-    ohai (6.14.0)
+    nokogiri (1.5.10)
+    nori (1.1.5)
+    ohai (6.16.0)
       ipaddress
       mixlib-cli
       mixlib-config
       mixlib-log
+      mixlib-shellout
       systemu
       yajl-ruby
-    polyglot (0.3.3)
-    rack (1.4.1)
-    rake (10.0.3)
+    rack (1.5.2)
+    rake (10.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyntlm (0.1.1)
+    safe_yaml (0.9.3)
     savon (0.9.5)
       akami (~> 1.0)
       builder (>= 2.1.2)
@@ -96,18 +101,12 @@ GEM
       nori (~> 1.0)
       wasabi (~> 1.0)
     systemu (2.5.2)
-    treetop (1.4.12)
-      polyglot
-      polyglot (>= 0.3.1)
-    uuidtools (2.1.3)
-    vcloud-rest (0.2.1)
-      nokogiri (~> 1.5.5)
-      rest-client (~> 1.6.7)
+    uuidtools (2.1.4)
     wasabi (1.0.0)
       nokogiri (>= 1.4.0)
-    webmock (1.9.0)
+    webmock (1.12.3)
       addressable (>= 2.2.7)
-      crack (>= 0.1.7)
+      crack (>= 0.3.2)
     winrm (1.1.2)
       gssapi (~> 1.0.0)
       httpclient (~> 2.2.0.2)
@@ -125,5 +124,5 @@ DEPENDENCIES
   knife-vcloud!
   minitest
   rake
-  vcloud-rest (~> 0.2.0)
+  vcloud-rest!
   webmock
