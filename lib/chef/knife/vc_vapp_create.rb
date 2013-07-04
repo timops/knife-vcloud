@@ -23,7 +23,7 @@ class Chef
     class VcVappCreate < Chef::Knife
       include Knife::VcCommon
 
-      banner "knife vc vapp create [VDC_ID] [NAME] [DESCRIPTION] [TEMPLATE_ID] (options)"
+      banner "knife vc vapp create [VDC_NAME] [NAME] [DESCRIPTION] [TEMPLATE_NAME] (options)"
 
       def run
         $stdout.sync = true
