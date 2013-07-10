@@ -49,6 +49,7 @@ class Chef
 
         if config[:start_vapp]
           connection.poweron_vapp(vapp_id)
+          puts "\nvApp [ #{name} : #{ui.color(vapp_id, :cyan)} ] started."
         end
 
         connection.logout
