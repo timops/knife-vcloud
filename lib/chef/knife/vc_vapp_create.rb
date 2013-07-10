@@ -25,6 +25,12 @@ class Chef
 
       banner "knife vc vapp create [VDC_NAME] [NAME] [DESCRIPTION] [TEMPLATE_NAME] (options)"
 
+      option :start_vapp,
+             :short => "-S",
+             :long => "--start",
+             :boolean => true,
+             :description => "Start vApp after creation"
+
       def run
         $stdout.sync = true
 
@@ -40,6 +46,10 @@ class Chef
         print "vApp creation..."
         wait_task(connection, task_id)
         puts "vApp created with ID: #{ui.color(vapp_id, :cyan)}"
+
+        if config[:start_vapp]
+          connection.poweron_vapp(vapp_id)
+        end
 
         connection.logout
       end

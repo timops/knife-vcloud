@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:timops/knife-vcloud.git
-  revision: 7c073f1504124816b6b400aa232da25bb3492ff9
+  revision: 3c1e9c4689ff3c76868f1137e12b8d23ef18038a
   specs:
     knife-vcloud (0.2.3)
       chef (>= 0.10.0)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git@github.com:timops/vcloud-rest.git
-  revision: 4c56e5847cfd05c557ff1cc027182b65ba80b00e
+  revision: a82c024a74415193355a847570c12ba8d020f567
   specs:
     vcloud-rest (0.2.2)
       nokogiri (~> 1.5.9)
